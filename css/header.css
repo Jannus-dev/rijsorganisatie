@@ -14,25 +14,36 @@
   background-size: cover;
   background-position: center;
 }
-
 .background header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
   width: 85%;
 }
-
-a {
-  text-decoration: none;
+nav a {
+  font-size: 1.5em;
 }
-
+nav a:hover {
+  font-size: 1.8em;
+}
 nav a img {
   height: 70px;
-  width: auto;
+  border-radius: 10px;
+}
+nav .box {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+}
+nav .box img {
+  height: 100%;
+}
+nav .box * {
+  color: #ffd972;
 }
