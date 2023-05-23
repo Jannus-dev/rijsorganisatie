@@ -17,11 +17,11 @@
                     <img src="img reisbureau\main-logo.jpg" alt="Logo">
                 </a>
                 <a href="pages/bestemmingen.php">Bestemmingen</a>
-                <a href="vakantie.php">Vakantie</a>
-                <a href="Willekeurig.php">Willekeurig</a>
-                <a href="Deals.php">Deals</a>
-                <a href="Ons-Bedrijf.php">Ons Bedrijf</a>
-                <a href="Login.php">Login</a>
+                <a href="pages/vakantie.php">Vakantie</a>
+                <a href="pages/Willekeurig.php">Willekeurig</a>
+                <a href="pages/Deals.php">Deals</a>
+                <a href="pages/Ons-Bedrijf.php">Ons Bedrijf</a>
+                <a href="pages/Login.php">Login</a>
             </nav>
         </header>
     </div>
