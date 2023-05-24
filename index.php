@@ -12,18 +12,27 @@
 <body>
     <div class="background">
         <header>
-            <nav>
+            <div class="logo">
                 <a href="index.php">
-                    <img src="img reisbureau\main-logo.jpg" alt="Logo">
+                    <img src="img-reisbureau\main-logo.jpg" alt="Logo">
                 </a>
-                <a href="pages/bestemmingen.php">Bestemmingen</a>
-                <a href="pages/vakantie.php">Vakantie</a>
-                <a href="pages/Willekeurig.php">Willekeurig</a>
-                <a href="pages/Deals.php">Deals</a>
-                <a href="pages/Ons-Bedrijf.php">Ons Bedrijf</a>
-                <a href="pages/Login.php">Login</a>
-            </nav>
+            </div>
+            <ul>
+                <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
+                <li><a href="pages/vakantie.php">Vakantie</a></li>
+                <li><a href="pages/willekeurig.php">Willekeurig</a></li>
+                <li><a href="pages/deals.php">Deals</a></li>
+                <li><a href="pages/login.php">Login</a></li>
+            </ul>
         </header>
+        <nav>
+            <div class="container">
+                <p>Voorgestelde vakanties</p>
+                <div class="filter">
+                    <img src="img-reisbureau/Filter-Icon.png" alt="">
+                </div>
+            </div>
+        </nav>
     </div>
 
 </body>

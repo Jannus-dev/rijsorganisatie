@@ -7,29 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vakantie</title>
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="background">
         <header>
             <nav>
-                <a href="../index.php">
-                    <img src="../img reisbureau\main-logo.jpg" alt="Logo">
-                </a>
-                <a href="bestemmingen.php">Bestemmingen</a>
-                <div class="box">
-                    <img src="../img reisbureau\linkervleugel.png" alt="">
-                    <a href="vakantie.php">Vakantie</a>
-                    <img src="../img reisbureau\rechtervleugel.png" alt="">
+                <div class="logo">
+                    <a href="../index.php">
+                        <img src="../img-reisbureau\main-logo.jpg" alt="Logo">
+                    </a>
                 </div>
-                <a href="willekeurig.php">Willekeurig</a>
-                <a href="deals.php">Deals</a>
-                <a href="login.php">Login</a>
+                <ul>
+                    <li><a href="bestemmingen.php">Bestemmingen</a></li>
+                    <li>
+                        <div class="box">
+                            <img src="../img-reisbureau\linkervleugel.png" alt="">
+                            <a href="vakantie.php">Vakantie</a>
+                            <img src="../img-reisbureau\rechtervleugel.png" alt="">
+                        </div>
+                    </li>
+                    <li><a href="willekeurig.php">Willekeurig</a></li>
+                    <li><a href="deals.php">Deals</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
             </nav>
         </header>
     </div>
 
-    <footer> <a href="Ons-Bedrijf.php">Ons Bedrijf</a></footer>
+    <!-- <footer> <a href="Ons-Bedrijf.php">Ons Bedrijf</a></footer> -->
 
 
 </body>
