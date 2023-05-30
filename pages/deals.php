@@ -16,27 +16,34 @@
 <body>
     <div class="background">
         <header>
-            <nav>
-                <div class="logo">
-                    <a href="../index.php">
-                        <img src="../img-reisbureau\main-logo.jpg" alt="Logo">
-                    </a>
-                </div>
-                <ul>
-                    <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                    <li><a href="vakantie.php">Vakantie</a></li>    
-                    <li><a href="willekeurig.php">Willekeurig</a></li>
-                    <li>
-                        <div class="box">
-                            <img src="../img-reisbureau\linkervleugel.png" alt="">
-                            <a href="deals.php">Deals</a>
-                            <img src="../img-reisbureau\rechtervleugel.png" alt="">
-                        </div>
-                    </li>
-                    <li><a href="login.php">Login</a></li>
-                </ul>
-            </nav>
+            <div class="logo">
+                <a href="../index.php">
+                    <img src="../img-reisbureau\main-logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="bestemmingen.php">Bestemmingen</a></li>
+                <li><a href="vakantie.php">Vakantie</a></li>
+                <li><a href="willekeurig.php">Willekeurig</a></li>
+                <li>
+                    <div class="box">
+                        <img src="../img-reisbureau\linkervleugel.png" alt="">
+                        <a href="deals.php">Deals</a>
+                        <img src="../img-reisbureau\rechtervleugel.png" alt="">
+                    </div>
+                </li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
         </header>
+        <nav>
+            <div class="container">
+                <div class="filler"></div>
+                <p>Voorgestelde vakanties</p>
+                <div class="filter">
+                    <img src="../img-reisbureau/Filter-Icon.png" alt="">
+                </div>
+            </div>
+        </nav>
     </div>
 
     <!-- <footer> <a href="Ons-Bedrijf.php">Ons Bedrijf</a></footer> -->
