@@ -80,17 +80,22 @@ nav {
   margin-top: 50px;
   display: flex;
   justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 nav .container {
   height: 100%;
-  width: 85%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+nav .filler {
+  width: 32px;
+  height: 100%;
 }
 nav .filter {
   height: 100%;
-  position: relative;
   display: flex;
   align-items: center;
 }

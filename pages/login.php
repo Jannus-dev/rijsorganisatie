@@ -37,6 +37,7 @@
         </header>
         <nav>
             <div class="container">
+                <div class="filler"></div>
                 <p>Voorgestelde vakanties</p>
                 <div class="filter">
                     <img src="../img-reisbureau/Filter-Icon.png" alt="">
