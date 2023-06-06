@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -39,6 +40,46 @@
                 </div>
             </div>
         </nav>
+
+        <div class="box">
+            <ul class="voorgestelde-lijst">
+                <section>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox">
+                            <p>hello?</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                    <li>
+                        <div class="whitebox"></div>
+                    </li>
+                </section>
+            </ul>
+        </div>
+
     </div>
     <?php include_once("footer.php");?>
 

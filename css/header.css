@@ -63,7 +63,7 @@ header {
   height: 100%;
   border-radius: 10px;
 }
-ul {
+header ul {
   display: flex;
   width: 80%;
   height: 80px;
@@ -72,7 +72,7 @@ ul {
   justify-content: space-between;
   box-sizing: border-box;
 }
-ul li {
+header ul li {
   height: 100%;
   width: 100px;
   display: flex;
