@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -31,6 +32,7 @@
         </header>
         <nav>
             <div class="container">
+                <div class="filler"></div>
                 <p>Voorgestelde vakanties</p>
                 <div class="filter">
                     <img src="img-reisbureau/Filter-Icon.png" alt="">
@@ -38,6 +40,7 @@
             </div>
         </nav>
     </div>
+    <?php include_once("footer.php");?>
 
 </body>
 
