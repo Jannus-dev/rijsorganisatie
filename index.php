@@ -70,12 +70,6 @@
                             <p>hello?</p>
                         </div>
                     </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
                 </section>
             </ul>
         </div>
