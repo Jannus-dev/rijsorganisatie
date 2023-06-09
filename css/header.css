@@ -79,6 +79,9 @@ header ul li {
   align-items: center;
   justify-content: flex-end;
 }
+header ul a:hover {
+  font-weight: bolder;
+}
 
 header .box {
   display: flex;
