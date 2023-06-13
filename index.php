@@ -1,3 +1,11 @@
+<?php
+    require_once 'pages/admin/conn.php';
+    $stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
+    LIMIT 8");
+    $stmt->execute(); 
+    $data = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +42,7 @@
         <nav>
             <div class="container">
                 <div class="filler"></div>
-                <p>Voorgestelde vakanties</p>
+                <p>Top Landen</p>
                 <div class="filter">
                     <img src="img-reisbureau/Filter-Icon.png" alt="">
                 </div>
@@ -42,8 +50,20 @@
         </nav>
 
         <div class="box">
-            <ul class="voorgestelde-lijst">
+            <div class="voorgestelde-lijst">
                 <section>
+                    <?php
+                            foreach ($data as $row) {
+                                echo "<div class='whitebox'>";
+                                echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                                echo "<div class='whitebox-botom'>";
+                                echo "<h3>" . $row['land'] . "</h3>";
+                                echo "<a href='pages/bestemmingen.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                                echo "</div>";
+                                echo "</div>";
+                            }
+
+                        ?>
                     <li>
                         <div class="whitebox"></div>
                     </li>
@@ -71,7 +91,7 @@
                         </div>
                     </li>
                 </section>
-            </ul>
+            </div>
         </div>
 
     </div>
