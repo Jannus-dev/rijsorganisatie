@@ -64,32 +64,6 @@
                             }
 
                         ?>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox"></div>
-                    </li>
-                    <li>
-                        <div class="whitebox">
-                            <p>hello?</p>
-                        </div>
-                    </li>
                 </section>
             </div>
         </div>
