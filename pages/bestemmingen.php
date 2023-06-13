@@ -1,3 +1,6 @@
+<?php 
+require_once "admin/conn.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +49,7 @@
         </nav>
     </div>
 
-    <!-- <footer> <a href="Ons-Bedrijf.php">Ons Bedrijf</a></footer> -->
-
+    <?php include_once("../footer.php");?>
 
 </body>
 

@@ -46,9 +46,7 @@
         </nav>
     </div>
 
-    <!-- <footer> <a href="Ons-Bedrijf.php">Ons Bedrijf</a></footer> -->
-
-
+    <?php include_once("../footer.php");?>
 </body>
 
 </html>
