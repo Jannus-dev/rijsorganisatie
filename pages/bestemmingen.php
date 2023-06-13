@@ -11,6 +11,7 @@ require_once "admin/conn.php";
     <title>Bestemmingen</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/bestemmingen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -38,14 +39,20 @@ require_once "admin/conn.php";
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>
-        <nav>
+        <div class="datum-box">
+            <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate" name="departureDate"
+                required />
+            <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate" name="returnDate"
+                required />
+        </div>
+        <!-- <nav>
             <div class="container">
                 <div class="filler"></div>
                 <p>Voorgestelde vakanties</p>
                 <div class="filter">
                     <img src="../img-reisbureau/Filter-Icon.png" alt="">
                 </div>
-            </div>
+            </div> -->
         </nav>
     </div>
 
