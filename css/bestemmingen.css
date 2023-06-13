@@ -1,0 +1,32 @@
+.datum-box {
+  background-color: #fff;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.datum::-webkit-datetime-edit {
+  padding: 1em;
+}
+.datum::-webkit-datetime-edit-fields-wrapper {
+  background: silver;
+}
+.datum::-webkit-datetime-edit-text {
+  color: red;
+  padding: 0 0.3em;
+}
+.datum::-webkit-datetime-edit-month-field {
+  color: blue;
+}
+.datum::-webkit-datetime-edit-day-field {
+  color: green;
+}
+.datum::-webkit-datetime-edit-year-field {
+  color: purple;
+}
+.datum::-webkit-inner-spin-button {
+  display: none;
+}
+.datum::-webkit-calendar-picker-indicator {
+  background: orange;
+}

@@ -8,6 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -35,15 +36,27 @@
                 </li>
             </ul>
         </header>
-        <nav>
-            <div class="container">
-                <div class="filler"></div>
-                <p>Voorgestelde vakanties</p>
-                <div class="filter">
-                    <img src="../img-reisbureau/Filter-Icon.png" alt="">
+        <div class="box-form-login-register">
+            <div class="box-form-login">
+                <div class="h1box">
+                    <h1>LOGIN</h1>
                 </div>
+                <form name="login" action="login.php" method="post">
+                    <input type="text" name="gebruikersnaam" placeholder="gebruikersnaam" required autofocus>
+                    <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord" required>
+                    <input type="submit" name="login" value="login" require_once>
+                    <div class="box-checkbox">
+                        <input type="checkbox" id="check" name="check" onclick="myFunction()">
+                        <p>Toon wachtwoord</p>
+                    </div>
+                </form>
             </div>
-        </nav>
+            <a href="register.php">
+                <div class="register">
+                    <input type="submit" name="registreer" value="registreer" require_once>
+                </div>
+            </a>
+        </div>
     </div>
 
     <?php include_once("../footer.php");?>
