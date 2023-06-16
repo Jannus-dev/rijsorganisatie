@@ -53,17 +53,16 @@
             <div class="voorgestelde-lijst">
                 <section>
                     <?php
-                            foreach ($data as $row) {
-                                echo "<div class='whitebox'>";
-                                echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
-                                echo "<div class='whitebox-botom'>";
-                                echo "<h3>" . $row['land'] . "</h3>";
-                                echo "<a href='pages/bestemmingen.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
-                                echo "</div>";
-                                echo "</div>";
-                            }
-
-                        ?>
+                        foreach ($data as $row) {
+                            echo "<div class='whitebox'>";
+                            echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                            echo "<div class='whitebox-botom'>";
+                            echo "<h3>" . $row['land'] . "</h3>";
+                            echo "<a href='pages/bestemmingen.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    ?>
                 </section>
             </div>
         </div>

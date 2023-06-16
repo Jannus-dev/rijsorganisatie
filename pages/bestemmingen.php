@@ -39,24 +39,29 @@ require_once "admin/conn.php";
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>
+        <div class="nav">
+            <div class="land selectie"></div>
+            <div class="hotel selectie"></div>
+            <div class="personen selectie"></div>
+            <div class="datum selectie">
+                <div class="datum-box">
+                    <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate"
+                        name="departureDate" required />
+                    <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate" name="returnDate"
+                        required />
+                </div>
+            </div>
+            <div class="zoek selectie"></div>
+        </div>
         <div class="datum-box">
             <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate" name="departureDate"
                 required />
             <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate" name="returnDate"
                 required />
         </div>
-        <!-- <nav>
-            <div class="container">
-                <div class="filler"></div>
-                <p>Voorgestelde vakanties</p>
-                <div class="filter">
-                    <img src="../img-reisbureau/Filter-Icon.png" alt="">
-                </div>
-            </div> -->
-        </nav>
     </div>
-
     <?php include_once("../footer.php");?>
+    <script src="bestemmingen.js"></script>
 
 </body>
 
