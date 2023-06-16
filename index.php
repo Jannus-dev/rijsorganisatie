@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -33,7 +32,6 @@
             </div>
             <ul>
                 <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="pages/vakantie.php">Vakantie</a></li>
                 <li><a href="pages/willekeurig.php">Willekeurig</a></li>
                 <li><a href="pages/deals.php">Deals</a></li>
                 <li><a href="pages/login.php">Login</a></li>

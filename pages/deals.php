@@ -22,9 +22,7 @@
                 </a>
             </div>
             <ul>
-                <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="vakantie.php">Vakantie</a></li>
-                <li><a href="willekeurig.php">Willekeurig</a></li>
+                <li><a href="bestemmingen.php">Bestemmingen</a></li>                <li><a href="willekeurig.php">Willekeurig</a></li>
                 <li>
                     <div class="box">
                         <img src="../img-reisbureau\linkervleugel.png" alt="">

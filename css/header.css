@@ -33,6 +33,9 @@
   background: #ffd972;
 }
 
+body {
+  overflow-x: hidden;
+}
 .background {
   background-image: url("../img-reisbureau/beach.png");
   width: 100%;

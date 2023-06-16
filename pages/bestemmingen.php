@@ -33,32 +33,47 @@ require_once "admin/conn.php";
                         <img src="../img-reisbureau\rechtervleugel.png" alt="">
                     </div>
                 </li>
-                <li><a href="vakantie.php">Vakantie</a></li>
                 <li><a href="willekeurig.php">Willekeurig</a></li>
                 <li><a href="deals.php">Deals</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>
         <div class="nav">
-            <div class="land selectie"></div>
-            <div class="hotel selectie"></div>
-            <div class="personen selectie"></div>
-            <div class="datum selectie">
-                <div class="datum-box">
-                    <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate"
-                        name="departureDate" required />
-                    <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate" name="returnDate"
-                        required />
-                </div>
-            </div>
-            <div class="zoek selectie"></div>
+            <ul>
+                <li class="land selectie">
+                    <p>selecteer een land</p>
+                    <img src="../img-reisbureau/arrow-down.png" alt="drop">
+                </li>
+                <li class="hotel selectie">
+                    <p>hotel</p>
+                    <img src="../img-reisbureau/arrow-down.png" alt="drop">
+                </li>
+                <li class="personen selectie">
+                    <p>personen</p>
+                    <img src="../img-reisbureau/arrow-down.png" alt="drop">
+                </li>
+                <li class="datum selectie">
+                    <p>datum</p>
+                    <img src="../img-reisbureau/arrow-down.png" alt="drop">
+                    <div class="datum-box">
+                        <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate"
+                            name="departureDate" required />
+                        <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate"
+                            name="returnDate" required />
+                    </div>
+                </li>
+                <li class="zoek selectie">
+                    <p>ZOEK</p>
+                    <img src="../img-reisbureau/search.png" alt="search">
+                </li>
+            </ul>
         </div>
-        <div class="datum-box">
+        <!-- <div class="datum-box">
             <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate" name="departureDate"
                 required />
             <input class="datum eind" type="date" onfocus="this.showPicker()" id="returnDate" name="returnDate"
                 required />
-        </div>
+        </div> -->
     </div>
     <?php include_once("../footer.php");?>
     <script src="bestemmingen.js"></script>
