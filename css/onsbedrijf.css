@@ -1,6 +1,7 @@
 .textbox-container {
   width: 100%;
-  padding: 30px 100px 30px 100px;
+  padding: 0 100px;
+  margin: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
