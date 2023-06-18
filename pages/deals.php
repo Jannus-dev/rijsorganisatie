@@ -1,3 +1,10 @@
+<?php
+require_once 'admin/conn.php';
+$stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
+    LIMIT 18");
+$stmt->execute();
+$data = $stmt->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,63 +43,66 @@
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>
-        <div class="container">
-            <div class="nav">
-                <div class="select-region-box">
-                    <div class="select-region">
-                        <div class="container">
-                            <h2>Select a Region</h2>
-                            <form>
-                                <label>
-                                    <input type="radio" name="region" value="Europe">
-                                    Europe
-                                </label>
-                                <label>
-                                    <input type="radio" name="region" value="North America">
-                                    North America
-                                </label>
-                                <label>
-                                    <input type="radio" name="region" value="South America">
-                                    South America
-                                </label>
-                                <label>
-                                    <input type="radio" name="region" value="Asia">
-                                    Asia
-                                </label>
-                                <label>
-                                    <input type="radio" name="region" value="Africa">
-                                    Africa
-                                </label>
-                                <label>
-                                    <input type="radio" name="region" value="Australia">
-                                    Australia
-                                </label>
-                            </form>
-                            <button onclick="filterRegion()">Filter</button>
-                        </div>
+        <div class="item-container">
+            <nav>
+                <h2>Kies een Regio</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="region" value="Europe">
+                        Europa
+                    </label>
+                    <label>
+                        <input type="radio" name="region" value="North America">
+                        Noord-Amerika
+                    </label>
+                    <label>
+                        <input type="radio" name="region" value="South America">
+                        Zuid-Amerika
+                    </label>
+                    <label>
+                        <input type="radio" name="region" value="Asia">
+                        Azië
+                    </label>
+                    <label>
+                        <input type="radio" name="region" value="Africa">
+                        Afrika
+                    </label>
+                    <label>
+                        <input type="radio" name="region" value="Australia">
+                        Australië
+                    </label>
+                </form>
+                <button onclick="filterRegion()">Filter</button>
 
-                        <script>
-                            function filterRegion() {
-                                var regionRadios = document.getElementsByName("region");
-                                var selectedRegion = "";
-
-                                for (var i = 0; i < regionRadios.length; i++) {
-                                    if (regionRadios[i].checked) {
-                                        selectedRegion = regionRadios[i].value;
-                                        break;
-                                    }
-                                }
-
-                                if (selectedRegion !== "") {
-                                    console.log("Geselecteerde regio: " + selectedRegion);
-                                } else {
-                                    alert("Kies een regio A.U.B.");
-                                }
-                            }
-                        </script>
-                    </div>
-                </div>
+            </nav>
+            <div class="deals-box">
+                    <?php
+                    foreach ($data as $row) {
+                        echo " <div class='deal item'>";
+                        // echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                        echo "<div class='img'>";
+                        echo " <img src='../img-reisbureau/beach.png' alt='foto?'>";
+                        echo "</div>";
+                        // hierboven als img van iets zoals een hotel
+                        echo "<div class='whitebox-botom'>";
+                        echo "<h2>" . $row['land'] . "</h2>";
+                        // hierboven als titel niet random maar van een hotel ofzo
+                        echo "<a href='boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                        echo "</div>";
+                        echo "<h3>HALLO IK ZIT VAST HELP</h3>";
+                        // hierboven als informatie over product
+                        echo "<div class='price-box'>";
+                        echo "<h1 class='old-price'>12€</h1>";
+                        // hierboven als oude prijs vanuit DB
+                        echo "<h1 class='new-price'>9€</h1>";
+                        // hierboven als oude prijs -25%
+                        // GOED LEZEN
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>
             </div>
+
         </div>
     </div>
 
@@ -100,5 +110,25 @@
 
     <?php include_once("../footer.php"); ?>
 </body>
+
+<script>
+    function filterRegion() {
+        var regionRadios = document.getElementsByName("region");
+        var selectedRegion = "";
+
+        for (var i = 0; i < regionRadios.length; i++) {
+            if (regionRadios[i].checked) {
+                selectedRegion = regionRadios[i].value;
+                break;
+            }
+        }
+
+        if (selectedRegion !== "") {
+            console.log("Geselecteerde regio: " + selectedRegion);
+        } else {
+            alert("Kies een regio A.U.B.");
+        }
+    }
+</script>
 
 </html>

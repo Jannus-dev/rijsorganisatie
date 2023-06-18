@@ -1,12 +1,25 @@
-.select-region{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+.item-container {
+  display: flex;
+  width: 100%;
+  padding: 0 100px;
+  justify-content: center;
+  height: 500px;
+  margin: 100px 0;
+  gap: 5em;
 }
-.container {
+nav {
+  min-width: 200px;
   max-width: 300px;
+  height: fit-content;
+  max-height: 500px;
   background-color: #fff;
-  padding: 20px 20px 20px 10px;
+  padding: 20px;
   border-radius: 5px;
-        margin: 50px 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
 }
 form * {
   color: black;
@@ -19,6 +32,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-height: 400px;
+  width: 100%;
+  overflow-y: scroll;
 }
 button {
   margin-top: 20px;
@@ -35,4 +51,62 @@ button:hover {
   cursor: pointer;
   scale: 1.1;
   font-weight: bolder;
+}
+
+.deals-box {
+  width: 70%;
+  min-width: 200px;
+  /* background-color: grey; */
+  height: 100%;
+  /* padding: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  gap: 1em;
+}
+.deals-box * {
+  color: black;
+}
+.item {
+  width: 175px;
+  height: 225px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.item img {
+  width: 100%;
+  border-radius: 3px;
+}
+.whitebox-botom {
+  display: flex;
+  justify-content: space-between;
+  max-height: 50px;
+}
+.item h2 {
+  font-size: 15px;
+  margin-top: 5px;
+  max-width: 80%;
+}
+.item h3 {
+  font-size: 10px;
+  max-width: 80%;
+}
+.whitebox-img {
+  width: 100%;
+  height: 70%;
+}
+.whitebox-link {
+  font-size: 50px;
+}
+.price-box {
+  font-size: 10px;
+  margin-top: 5px;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.old-price {
+  text-decoration-line: line-through;
+  text-decoration-color: rgb(216, 88, 88);
 }
