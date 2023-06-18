@@ -19,9 +19,12 @@ footer p {
 footer * {
   color: grey;
 }
-footer p:first-of-type {
+footer a:hover{
+  font-weight: bolder;
+}
+/* footer p:first-of-type {
   text-align: left;
 }
 footer p:last-of-type {
   text-align: right;
-}
+} */
