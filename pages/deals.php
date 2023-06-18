@@ -71,6 +71,7 @@ $data = $stmt->fetchAll();
                         <input type="radio" name="region" value="Australia">
                         Australië
                     </label>
+                    
                 </form>
                 <button onclick="filterRegion()">Filter</button>
 
