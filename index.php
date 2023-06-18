@@ -51,7 +51,6 @@ $data = $stmt->fetchAll();
             <div class="voorgestelde-lijst">
                 <section>
                     <?php
-
                             foreach ($data as $row) {
                                 echo "<div class='whitebox'>";
                                 echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
@@ -63,8 +62,6 @@ $data = $stmt->fetchAll();
                             }
 
                         ?>
-
-           
                 </section>
             </div>
         </div>
