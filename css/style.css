@@ -1,3 +1,38 @@
+nav {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 217, 114, 0.6) 28.96%,
+    rgba(255, 217, 114, 0.6) 100%
+  );
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+nav .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .filler {
+  width: 32px;
+  height: 100%;
+}
+nav .filter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav .filter img {
+  height: 80%;
+  filter: invert(1);
+}
+
 .box {
   display: flex;
   justify-content: center;
@@ -32,28 +67,24 @@
   border-radius: 5px;
 }
 
-.whitebox h3
-{
+.whitebox h3 {
   color: black;
   margin-left: 5px;
 }
 
-.whitebox-img
-{
+.whitebox-img {
   width: 100%;
   height: 70%;
 }
 
-.whitebox-link
-{
+.whitebox-link {
   color: black;
   font-size: 60px;
   margin-right: 5px;
   margin-top: 0px;
 }
 
-.whitebox-botom
-{
+.whitebox-botom {
   display: flex;
   justify-content: space-between;
   align-items: center;
