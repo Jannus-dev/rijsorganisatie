@@ -1,9 +1,11 @@
 <?php
 require_once 'admin/conn.php';
 $stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
-    LIMIT 18");
+    LIMIT 20");
 $stmt->execute();
 $data = $stmt->fetchAll();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,63 +47,62 @@ $data = $stmt->fetchAll();
         </header>
         <div class="item-container">
             <nav>
-                <h2>Kies een Regio</h2>
+                <h2>Filter regio/'s:</h2>
                 <form>
                     <label>
-                        <input type="radio" name="region" value="Europe">
+                        <input type="checkbox" name="region" value="Europe">
                         Europa
                     </label>
                     <label>
-                        <input type="radio" name="region" value="North America">
+                        <input type="checkbox" name="region" value="North America">
                         Noord-Amerika
                     </label>
                     <label>
-                        <input type="radio" name="region" value="South America">
+                        <input type="checkbox" name="region" value="South America">
                         Zuid-Amerika
                     </label>
                     <label>
-                        <input type="radio" name="region" value="Asia">
+                        <input type="checkbox" name="region" value="Asia">
                         Azië
                     </label>
                     <label>
-                        <input type="radio" name="region" value="Africa">
+                        <input type="checkbox" name="region" value="Africa">
                         Afrika
                     </label>
                     <label>
-                        <input type="radio" name="region" value="Australia">
+                        <input type="checkbox" name="region" value="Australia">
                         Australië
                     </label>
-                    
+
                 </form>
                 <button onclick="filterRegion()">Filter</button>
-
             </nav>
             <div class="deals-box">
-                    <?php
-                    foreach ($data as $row) {
-                        echo " <div class='deal item'>";
-                        // echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
-                        echo "<div class='img'>";
-                        echo " <img src='../img-reisbureau/beach.png' alt='foto?'>";
-                        echo "</div>";
-                        // hierboven als img van iets zoals een hotel
-                        echo "<div class='whitebox-botom'>";
-                        echo "<h2>" . $row['land'] . "</h2>";
-                        // hierboven als titel niet random maar van een hotel ofzo
-                        echo "<a href='boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
-                        echo "</div>";
-                        echo "<h3>HALLO IK ZIT VAST HELP</h3>";
-                        // hierboven als informatie over product
-                        echo "<div class='price-box'>";
-                        echo "<h1 class='old-price'>12€</h1>";
-                        // hierboven als oude prijs vanuit DB
-                        echo "<h1 class='new-price'>9€</h1>";
-                        // hierboven als oude prijs -25%
-                        // GOED LEZEN
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                    ?>
+                <?php
+                foreach ($data as $row) {
+                    echo " <div class='deal item'>";
+                    // echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                    echo "<div class='img'>";
+                    echo " <img src='../img-reisbureau/beach.png' alt='foto?'>";
+                    echo "</div>";
+                    // hierboven als img van iets zoals een hotel
+                    echo "<div class='whitebox-botom'>";
+                    echo "<h2>" . $row['land'] . "</h2>";
+                    // hierboven als titel niet random maar van een hotel ofzo
+                    echo "<a href='boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                    echo "</div>";
+                    echo "<h3>" . $data_text['text'] . "</h3>";
+                    // hierboven als informatie over product
+                    echo "<div class='price-box'>";
+                    echo "<h1 class='old-price'>12€</h1>";
+                    // hierboven als oude prijs vanuit DB
+                    echo "<h1 class='new-price'>9€</h1>";
+                    // hierboven als oude prijs -25%
+                    // GOED LEZEN
+                    echo "</div>";
+                    echo "</div>";
+                }
+                ?>
             </div>
 
         </div>
@@ -113,19 +114,35 @@ $data = $stmt->fetchAll();
 </body>
 
 <script>
+    // function filterRegion() {
+    //     var regionRadios = document.getElementsByName("region");
+    //     var selectedRegion = "";
+
+    //     for (var i = 0; i < regionRadios.length; i++) {
+    //         if (regionRadios[i].checked) {
+    //             selectedRegion = regionRadios[i].value;
+    //             break;
+    //         }
+    //     }
+
+    //     if (selectedRegion !== "") {
+    //         console.log("Geselecteerde regio: " + selectedRegion);
+    //     } else {
+    //         alert("Kies een regio A.U.B.");
+    //     }
+    // }
+
     function filterRegion() {
-        var regionRadios = document.getElementsByName("region");
-        var selectedRegion = "";
+        var regionCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        var selectedRegions = [];
 
-        for (var i = 0; i < regionRadios.length; i++) {
-            if (regionRadios[i].checked) {
-                selectedRegion = regionRadios[i].value;
-                break;
-            }
-        }
+        regionCheckboxes.forEach(function(checkbox) {
+            selectedRegions.push(checkbox.value);
+        });
 
-        if (selectedRegion !== "") {
-            console.log("Geselecteerde regio: " + selectedRegion);
+        if (selectedRegions.length > 0) {
+            // Perform any desired operations with the selected regions
+            console.log("Geselecteerde regio/'s: " + selectedRegions.join(", "));
         } else {
             alert("Kies een regio A.U.B.");
         }

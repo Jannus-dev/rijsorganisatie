@@ -6,9 +6,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
-footer p {
+footer a {
   /* min-width: 200px; */
   max-width: 300px;
   text-align: center;
@@ -19,12 +18,16 @@ footer p {
 footer * {
   color: grey;
 }
-footer a:hover{
+footer a:hover {
   font-weight: bolder;
 }
-/* footer p:first-of-type {
-  text-align: left;
+
+.coppy {
+  /* background-color: #ffd972; */
+  background-color: rgb(240, 240, 240);
+  text-align: center;
 }
-footer p:last-of-type {
-  text-align: right;
-} */
+
+.coppy p {
+  color: grey;
+}

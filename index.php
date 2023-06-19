@@ -61,11 +61,11 @@ $data = $stmt->fetchAll();
 
     </div>
     <footer>
-        <p>Rights all owned by GeenIdee.nl</p>
-        <p>Privacy and service agreement</p>
-        <p><a href="pages/footerpage/contact.php">Contact</a></p>
-        <p><a href="pages/footerpage/onsbedrijf.php">Ons Bedrijf</a></p>
-    </footer>
+    <a href="pages/footerpage/algemene-voorwaarden.php">Algemene voorwaarden</a>
+    <a href="pages/footerpage/privacy-policy.php"> Privacy policy</a>
+    <a href="pages/footerpage/contact.php">Contact</a>
+    <a href="pages/footerpage/onsbedrijf.php">Ons Bedrijf</a>
+</footer>
 
 </body>
 
