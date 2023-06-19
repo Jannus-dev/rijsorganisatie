@@ -41,7 +41,11 @@ require_once "admin/conn.php";
         <div class="nav">
             <ul>
                 <li class="land selectie">
-                    <p>selecteer een land</p>
+                    <div class="dropdown">
+                        <input type="text" id="search-bar" onkeyup="searchFunction()"/>
+                            <div class="dropdown-content" id="dropdown">
+                            </div>
+                    </div>
                     <img src="../img-reisbureau/arrow-down.png" alt="drop">
                 </li>
                 <li class="hotel selectie">
@@ -67,6 +71,7 @@ require_once "admin/conn.php";
                     <img src="../img-reisbureau/search.png" alt="search">
                 </li>
             </ul>
+            <script src="dropertje.js"></script>
         </div>
         <!-- <div class="datum-box">
             <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate" name="departureDate"
