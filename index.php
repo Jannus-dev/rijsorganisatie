@@ -38,13 +38,7 @@ $data = $stmt->fetchAll();
             </ul>
         </header>
         <nav>
-            <div class="container">
-                <!-- <div class="filler"></div> -->
-                <p>Top Landen</p>
-                <!-- <div class="filter">
-                    <img src="img-reisbureau/Filter-Icon.png" alt="">
-                </div> -->
-            </div>
+            <h1>Top Landen</h1>
         </nav>
 
         <div class="box">

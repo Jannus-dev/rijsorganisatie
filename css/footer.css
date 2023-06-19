@@ -6,20 +6,25 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 footer p {
-  min-width: 200px;
+  /* min-width: 200px; */
   max-width: 300px;
   text-align: center;
   max-height: 100%;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 footer * {
   color: grey;
 }
-footer p:first-of-type {
+footer a:hover{
+  font-weight: bolder;
+}
+/* footer p:first-of-type {
   text-align: left;
 }
 footer p:last-of-type {
   text-align: right;
-}
+} */
