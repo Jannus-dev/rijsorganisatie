@@ -4,7 +4,7 @@ require_once 'conn.php'; // Inclusie van het bestand met de databaseverbinding
 $input = $_GET['input'];
 
 // Bouw de query op en voer deze uit met PDO
-$query = "SELECT * FROM jouw_tabelnaam WHERE kolomnaam LIKE :input";
+$query = "SELECT * FROM landen WHERE land LIKE :input";
 $stmt = $conn->prepare($query);
 $stmt->bindValue(':input', $input . '%');
 $stmt->execute();

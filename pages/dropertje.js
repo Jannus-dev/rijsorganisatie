@@ -16,6 +16,6 @@ function searchFunction() {
             document.getElementById("dropdown").innerHTML = dropdownContent;
         }
     };
-    xmlhttp.open("GET", "landsearge.php?input=" + input, true);
+    xmlhttp.open("GET", "landsearche.php?input=" + input, true);
     xmlhttp.send();
 }

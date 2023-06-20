@@ -70,8 +70,8 @@ require_once "admin/conn.php";
                     <p>ZOEK</p>
                     <img src="../img-reisbureau/search.png" alt="search">
                 </li>
+                <script src="dropertje.js"></script>
             </ul>
-            <script src="dropertje.js"></script>
         </div>
         <!-- <div class="datum-box">
             <input class="datum begin" type="date" onfocus="this.showPicker()" id="departureDate" name="departureDate"
