@@ -30,7 +30,12 @@
         </header>
         <div class="textbox-container">
             <div class="textbox">
-                <h1>Bedankt voor het versturen van je bericht!</h1>
+                <?php
+                echo "<h1>Bedankt voor het versturen van je bericht!</h1>";
+                echo "<p>Deze pagina sluit automatisch af!</p>";
+                header("Refresh:5; url=../../index.php", true, 303);
+                exit();
+                ?>
             </div>
         </div>
     </div>
@@ -42,5 +47,6 @@
         <a href="onsbedrijf.php">Ons Bedrijf</a>
     </footer>
 </body>
+
 
 </html>

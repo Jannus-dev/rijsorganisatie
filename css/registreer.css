@@ -1,14 +1,6 @@
-.box-form-login-register {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  margin-top: 30px;
-  /* gap: 3rem; */
-}
-.box-form-login {
-  width: 500px;
+
+.box-form-register {
+  width: 400px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -16,6 +8,8 @@
   /* gap: 1rem; */
   /* background-color: grey; */
   justify-content: center;
+  margin-top: 30px;
+
 }
 .h1box {
   height: 50px;
@@ -37,11 +31,13 @@ form {
   /* background: rgba(255, 255, 255, 0.25); */
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
-form input[name="gebruikersnaam"],
+
+/* input[name="gebruikersnaam"],
 input[name="wachtwoord"],
-input[name="login"] {
+input[name="login"] */
+form input {
   height: 30px;
-  width: 75%;
+  width: 100%;
   padding: 3px;
   border-radius: 5px;
   color: black;
@@ -52,21 +48,29 @@ input[name="login"] {
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-input[name="login"]:hover {
+input[name="registreer"]:hover {
   background-color: #ffd972;
   cursor: pointer;
   color: white;
   font-weight: bolder;
 }
-.box-checkbox {
+.checkbox-box {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
+  margin-top: 0.5rem;
+  width: 100%;
   align-items: center;
 }
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
-
+  /* accent-color: #e74543; */
+}
+form a {
+  color: black;
+}
+form a:hover {
+  color: grey;
 }
 .register {
   width: 250px;

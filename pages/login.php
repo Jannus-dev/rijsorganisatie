@@ -37,16 +37,20 @@
         <div class="box-form-login-register">
             <div class="box-form-login">
                 <div class="h1box">
-                    <h1>LOGIN</h1>
+                    <h1>Login</h1>
                 </div>
-                <form name="login" action="login.php" method="post">
+                <form name="login" action="index.php" method="post">
                     <input type="text" name="email" placeholder="Email" required autofocus>
-                    <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord" required>
+                    <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
                     <input type="submit" name="login" value="login" require_once>
-                    <div class="box-checkbox">
-                        <input type="checkbox" id="check" name="check" onclick="myFunction()">
-                        <p>Toon wachtwoord</p>
+                    <div class="checkbox-container">
+                        <div class="checkbox-box">
+                            <input type="checkbox" id="check" name="check" onclick="myFunction()">
+                            <label>Toon wachtwoord</label>
+                        </div>
+                        <a href="wachtwoord-vergeten.php">wachtwoord vergeten?</a>
                     </div>
+
                 </form>
             </div>
             <a href="registreer.php">
@@ -57,17 +61,17 @@
         </div>
     </div>
 
-    <?php include_once("../footer.php");?>
+    <?php include_once("../footer.php"); ?>
 </body>
 <script>
-function myFunction() {
-    const x = document.getElementById("wachtwoord");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
+    function myFunction() {
+        const x = document.getElementById("wachtwoord");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
-}
 </script>
 
 </html>

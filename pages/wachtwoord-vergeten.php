@@ -8,7 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/registreer.css">
+    <link rel="stylesheet" href="../css/wachtwoord-vergeten.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -25,25 +25,25 @@
             <ul>
                 <li><a href="bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="willekeurig.php">Willekeurig</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li>
+                    <div class="box">
+                        <img src="../img-reisbureau\linkervleugel.png" alt="">
+                        <a href="login.php">Login</a>
+                        <img src="../img-reisbureau\rechtervleugel.png" alt="">
+                    </div>
+                </li>
             </ul>
         </header>
-        <div class="box-form-register">
-            <div class="h1box">
-                <h1>Registreer</h1>
-            </div>
-            <form name="login" action="login.php" method="post">
-
-                <input type="text" name="email" placeholder="Email" required autofocus>
-                <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
-                <input type="text" name="naam" placeholder="Uw naam" required>
-                <input type="submit" name="registreer" value="registreer" require_once>
-                <div class="checkbox-box">
-                    <input type="checkbox" id="check" name="check" onclick="myFunction()">
-                    <label>Toon wachtwoord</label>
+     
+            <div class="box-form-forgor">
+                <div class="h1box">
+                    <h2>Wachtwoord vergeten</h2>
                 </div>
-            </form>
-        </div>
+                <form name="login" action="index.php" method="post">
+                    <input type="text" name="email" placeholder="Email" required autofocus>
+                    <input type="submit" name="login" value="Verzend email" require_once>
+                </form>
+            </div>
     </div>
 
     <?php include_once("../footer.php"); ?>

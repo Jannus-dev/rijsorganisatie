@@ -1,38 +1,60 @@
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.box-form-contact {
   width: 500px;
-  box-sizing: border-box;
+  /* height: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1rem; */
+  /* background-color: grey; */
+  justify-content: center;
   margin: 50px 0;
-  gap: 1em;
-}
-.container form * {
-  border-style: none;
-  outline: none;
-  color: black;
-  border-radius: 3px;
+  gap: 2rem;
 }
 form {
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  align-items: center;
+  /* justify-content: center; */
+  height: 250px;
+  /* background: rgba(255, 255, 255, 0.25); */
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+form * {
+  color: black;
+}
+.box{
   display: flex;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 30px 0 30px;
+  justify-content: space-between;
 }
-h2 {
-  text-align: center;
-}
-.information-box {
-  display: flex;
-  gap: 1em;
-}
-input {
-  padding: 5px;
-  width: 200px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 
+/* input[name="gebruikersnaam"],
+input[name="wachtwoord"],
+input[name="login"] */
+form input {
+  height: 30px;
+  width: 100%;
+  padding: 3px;
+  border-radius: 5px;
+  color: black;
+  box-sizing: border-box;
+  border: none transparent;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+input[name="name"], input[name="email"] {
+  width: 47.5%;
+
+}
+input[name="login"]:hover {
+  background-color: #ffd972;
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
 }
 textarea {
   width: 100%;
@@ -40,21 +62,8 @@ textarea {
   min-height: 100px;
   max-height: 200px;
   padding: 5px;
+  border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-
-}
-input[type="submit"] {
-  background-color: #ffd972;
-  color: white;
-  padding: 10px 15px;
-  transition: ease 0.3s;
-  /* border-radius: 5px; */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-
-}
-input[type="submit"]:hover {
-  background-color: #ffd972;
-  scale: 1.1;
-  font-weight: bolder;
-  cursor: pointer;
+  border: none;
+  outline: none;
 }

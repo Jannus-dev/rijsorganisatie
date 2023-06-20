@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/gebruiker.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/gebruiker.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -18,14 +18,14 @@
     <div class="background">
         <header>
             <div class="logo">
-                <a href="../index.php">
-                    <img src="../img-reisbureau\main-logo.jpg" alt="Logo">
+                <a href="../../index.php">
+                    <img src="../../img-reisbureau\main-logo.jpg" alt="Logo">
                 </a>
             </div>
             <ul>
-                <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="willekeurig.php">Willekeurig</a></li>
-                <li> <a href="login.php">Login</a></li>
+                <li><a href="../bestemmingen.php">Bestemmingen</a></li>
+                <li><a href="../willekeurig.php">Willekeurig</a></li>
+                <li> <a href="../login.php">Login</a></li>
             </ul>
         </header>
         <div class="container">
@@ -34,17 +34,18 @@
                     <ul>
                         <!-- ALLEEN ALS ADMIN!! -->
                         <li>
-                            <a href="gebruiker-pagina's-admin/onderhoud.php">
+                            <a href="../gebruiker-pagina's-admin/onderhoud.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/reparatie-icon.png" alt="moer">
+                                    <img src="../../img-reisbureau/reparatie-icon.png" alt="moer">
                                     <p>Onderhoud</p>
+
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="gebruiker-pagina's-admin/boekingen-toevoegen.php">
+                            <a href="../gebruiker-pagina's-admin/boekingen-toevoegen.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/booking-add.png" alt="boek">
+                                    <img src="../../img-reisbureau/booking-add.png" alt="boek">
                                     <p>Boekingen toevoegen</p>
                                 </div>
                             </a>
@@ -55,35 +56,36 @@
                         <!-- TOT EN MET HIER -->
 
                         <li>
-                            <a href="gebruiker.php">
+                            <a href="../gebruiker.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/User_icon_2.svg.png" alt="boek">
+                                    <img src="../../img-reisbureau/User_icon_2.svg.png" alt="boek">
                                     <p>Gebruiker</p>
-                                    < </div>
+
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="gebruiker-pagina's/boekingen.php">
+                            <a href="boekingen.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/book_icon-icons.com_73655.png" alt="boek">
+                                    <img src="../../img-reisbureau/book_icon-icons.com_73655.png" alt="boek">
                                     <p>Boekingen</p>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="gebruiker-pagina's/winkel-wagen.php">
+                            <a href="winkel-wagen.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/shopping-cart.png" alt="boek">
+                                    <img src="../../img-reisbureau/shopping-cart.png" alt="boek">
                                     <p>Winkel wagen</p>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="gebruiker-pagina's/wachtwoord-veranderen.php">
+                            <a href="wachtwoord-veranderen.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/icone-point-d-interrogation-question-jaune.png" alt="boek">
+                                    <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png" alt="boek">
                                     <p>Wachtwoord veranderen</p>
-                                </div>
+                                    < </div>
                             </a>
                         </li>
                     </ul>

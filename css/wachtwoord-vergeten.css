@@ -1,13 +1,4 @@
-.box-form-login-register {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  margin-top: 30px;
-  /* gap: 3rem; */
-}
-.box-form-login {
+.box-form-forgor {
   width: 400px;
   height: 300px;
   display: flex;
@@ -39,8 +30,8 @@ form {
 }
 
 /* input[name="gebruikersnaam"],
-input[name="wachtwoord"],
-input[name="login"] */
+  input[name="wachtwoord"],
+  input[name="login"] */
 form input {
   height: 30px;
   width: 100%;

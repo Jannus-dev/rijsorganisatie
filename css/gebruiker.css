@@ -9,16 +9,45 @@
   width: 100%;
   padding: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 100%;
   overflow-y: scroll;
   border-radius: 5px;
 }
+.nav-left{
+  width: 20%;
+  /* display: flex; */
+}
 .nav {
-    
+  height: 100%;
 }
 .nav * {
   color: black;
+}
+.black-line{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  border-radius: 5px;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 100%;
+  /* height: 200px; */
+}
+.icon {
+  height: 25px;
+  /* width: 25px; */
+  display: flex;
+  gap: 1em;
+}
+.icon img {
+  height: 100%;
+}
+.icon:hover {
+  scale: 1.1;
 }

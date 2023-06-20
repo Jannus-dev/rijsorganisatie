@@ -28,7 +28,20 @@
                 <li> <a href="../login.php">Login</a></li>
             </ul>
         </header>
-        <div class="container">
+        <div class="box-form-contact">
+            <div class="Contact">
+                <h1>Contact</h1>
+            </div>
+            <form name="login" action="contact-verzonden.php" method="post">
+                <div class="box">
+                    <input type="text" name="name" placeholder="Uw naam" required autofocus>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <textarea id="message" name="bericht" placeholder="Uw bericht" required></textarea>
+                <input type="submit" name="login" value="Verzenden" require_once>
+            </form>
+        </div>
+        <!-- <div class="container">
             <h2>Contact</h2>
             <form name="contact" action="contact-submitted.php" method="post">
                 <div class="information-box">
@@ -38,7 +51,7 @@
                 <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
                 <input type="submit" name="submit" value="Verzenden">
             </form>
-        </div>
+        </div> -->
     </div>
 
 
