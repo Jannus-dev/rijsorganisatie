@@ -44,10 +44,10 @@
 
 
     <footer>
-        <p>Rights all owned by GeenIdee.nl</p>
-        <p>Privacy and service agreement</p>
-        <p><a href="contact.php">Contact</a></p>
-        <p><a href="onsbedrijf.php">Ons Bedrijf</a></p>
+        <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>
+        <a href="privacy-policy.php"> Privacy policy</a>
+        <a href="contact.php">Contact</a>
+        <a href="onsbedrijf.php">Ons Bedrijf</a>
     </footer>
 </body>
 <?php
