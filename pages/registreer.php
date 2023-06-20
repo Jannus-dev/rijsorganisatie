@@ -25,21 +25,16 @@
             <ul>
                 <li><a href="bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="willekeurig.php">Willekeurig</a></li>
-                <li>
-                    <div class="box">
-                        <img src="../img-reisbureau\linkervleugel.png" alt="">
-                        <a href="login.php">Login</a>
-                        <img src="../img-reisbureau\rechtervleugel.png" alt="">
-                    </div>
-                </li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </header>
         <div class="box-form-login-register">
             <div class="box-form-login">
                 <div class="h1box">
-                    <h1>LOGIN</h1>
+                    <h1>REGISTREER</h1>
                 </div>
                 <form name="login" action="login.php" method="post">
+                    
                     <input type="text" name="email" placeholder="Email" required autofocus>
                     <input type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord" required>
                     <input type="submit" name="login" value="login" require_once>

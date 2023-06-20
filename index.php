@@ -33,7 +33,6 @@ $data = $stmt->fetchAll();
             <ul>
                 <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="pages/willekeurig.php">Willekeurig</a></li>
-                <li><a href="pages/deals.php">Deals</a></li>
                 <li><a href="pages/login.php">Login</a></li>
             </ul>
         </header>

@@ -8,7 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/contact.css">
+    <link rel="stylesheet" href="../../css/contact-verzonden.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -28,19 +28,12 @@
                 <li> <a href="../login.php">Login</a></li>
             </ul>
         </header>
-        <div class="container">
-            <h2>Contact</h2>
-            <form name="contact" action="contact-submitted.php" method="post">
-                <div class="information-box">
-                    <input type="text" id="name" name="name" placeholder="Naam" required>
-                    <input type="email" id="email" name="email" placeholder="voorbeeld@mail.com" required>
-                </div>
-                <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
-                <input type="submit" name="submit" value="Verzenden">
-            </form>
+        <div class="textbox-container">
+            <div class="textbox">
+                <h1>Bedankt voor het versturen van je bericht!</h1>
+            </div>
         </div>
     </div>
-
 
     <footer>
         <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>
@@ -49,21 +42,5 @@
         <a href="onsbedrijf.php">Ons Bedrijf</a>
     </footer>
 </body>
-<?php
-//  jan dit moet jij even doen en aanpassen op je onze DB. 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-if ($_database["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-
-    // POST deze data in de DB!
-
-    // Redirect to a thank you page
-    header("Location: contact-submitted.php");
-    exit();
-}
-?>
 
 </html>

@@ -13,6 +13,7 @@
   gap: 30px;
   overflow-y: scroll;
   padding-right: 30px;
+  min-width: fit-content;
 }
 nav {
   min-width: 200px;
@@ -63,6 +64,7 @@ button:hover {
   min-width: 200px;
   height: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -72,8 +74,8 @@ button:hover {
   color: black;
 }
 .item {
-  width: 175px;
-  height: 225px;
+  width: 250px;
+  height: 300px;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -89,12 +91,12 @@ button:hover {
   max-height: 50px;
 }
 .item h2 {
-  font-size: 13px;
+  font-size: 18px;
   margin-top: 5px;
   max-width: 80%;
 }
 .item h3 {
-  font-size: 10px;
+  font-size: 15px;
   max-width: 80%;
 }
 .whitebox-img {

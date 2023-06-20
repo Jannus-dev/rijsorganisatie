@@ -67,8 +67,8 @@ $data = $stmt->fetchAll();
                     <h2>Filter regio/'s:</h2>
                     <form>
                         <label>
-                            <input type="checkbox" name="region" value="Europe" checked>
-                                Europa
+                            <input type="checkbox" name="region" value="Europe">
+                            Europa
                         </label>
                         <label>
                             <input type="checkbox" name="region" value="North America">
@@ -157,9 +157,6 @@ function filterHotel_ingebgrepen() {
         // Perform any desired operations with the selected regions
         console.log("Selected Regions: " + selectedRegions.join(", "));
     }
-    // else {
-    //     alert("Please select at least one region.");
-    // }
 }
 
 function filterRegion() {

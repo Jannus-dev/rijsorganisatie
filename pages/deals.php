@@ -1,5 +1,17 @@
 <?php
 require_once 'admin/conn.php';
+
+// Query voor het ophalen van gegevens uit de eerste tabel
+$query1 = "SELECT land FROM landen";
+$stmt1 = $conn->query($query1);
+$results1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+
+// Query voor het ophalen van gegevens uit de tweede tabel
+$query2 = "SELECT column3, column4 FROM table2";
+$stmt2 = $conn->query($query2);
+$results2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+
 $stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
     LIMIT 20");
 $stmt->execute();

@@ -8,33 +8,20 @@
     <title>Login</title>
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/onsbedrijf.css">
+    <link rel="stylesheet" href="../../css/algemene-voorwaarden-geaccepteerd.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="background">
-        <header>
-            <div class="logo">
-                <a href="../../index.php">
-                    <img src="../../img-reisbureau\main-logo.jpg" alt="Logo">
-                </a>
-            </div>
-            <ul>
-                <li><a href="../bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="../willekeurig.php">Willekeurig</a></li>
-                <li><a href="../deals.php">Deals</a></li>
-                <li> <a href="../login.php">Login</a></li>
-            </ul>
-        </header>
-        <div class="textbox-container">
-            <div class="textbox">
-                <h1>Bedankt voor het versturen van je bericht!</h1>
-            </div>
+
+    <div class="textbox-container">
+        <div class="textbox">
+            <img src="../../img-reisbureau/niet-op-klikken.jpg" alt="">
         </div>
     </div>
+
 
     <footer>
         <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>

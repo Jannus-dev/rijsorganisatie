@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  padding: 0 100px;
+  margin: 100px 0;
+  display: flex;
+  height: 550px;
+}
+.nav-container {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+.nav {
+    
+}
+.nav * {
+  color: black;
+}
