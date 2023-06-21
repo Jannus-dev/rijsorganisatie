@@ -20,6 +20,10 @@
   width: 20%;
   /* display: flex; */
 }
+.nav-right{
+  width: 80%;
+  padding-left: 100px;
+}
 .nav {
   height: 100%;
 }
@@ -27,7 +31,8 @@
   color: black;
 }
 .black-line{
-  width: 100%;
+  /* width: 100%; */
+  width: 225px;
   height: 1px;
   background-color: black;
   border-radius: 5px;

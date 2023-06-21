@@ -33,62 +33,51 @@
                 <div class="nav nav-left">
                     <ul>
                         <!-- ALLEEN ALS ADMIN!! -->
-                        <li>
-                            <a href="../gebruiker-pagina's-admin/onderhoud.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/reparatie-icon.png" alt="moer">
-                                    <p>Onderhoud</p>
+
+                        <a href="../gebruiker-pagina's-admin/onderhoud.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/reparatie-icon.png" alt="moer">
+                                <p>Onderhoud</p>
+                            </div>
+                        </a>
+
+                        <a href="../gebruiker-pagina's-admin/boekingen-toevoegen.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/booking-add.png" alt="boek">
+                                <p>Boekingen toevoegen</p>
+                            </div>
+                        </a>
 
 
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../gebruiker-pagina's-admin/boekingen-toevoegen.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/booking-add.png" alt="boek">
-                                    <p>Boekingen toevoegen</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="black-line"></div>
+                        <div class="black-line"></div>
                         </li>
                         <!-- TOT EN MET HIER -->
 
-                        <li>
-                            <a href="../gebruiker.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/User_icon_2.svg.png" alt="boek">
-                                    <p>Gebruiker</p>
-
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="boekingen.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/book_icon-icons.com_73655.png" alt="boek">
-                                    <p>Boekingen</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="winkel-wagen.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/shopping-cart.png" alt="boek">
-                                    <p>Winkel wagen</p>
-                                    < </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="wachtwoord-veranderen.php">
-                                <div class="icon">
-                                    <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png" alt="boek">
-                                    <p>Wachtwoord veranderen</p>
-                                </div>
-                            </a>
-                        </li>
+                        <a href="../gebruiker.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/User_icon_2.svg.png" alt="boek">
+                                <p>Gebruiker</p>
+                            </div>
+                        </a>
+                        <a href="../gebruiker-pagina's/boekingen.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/book_icon-icons.com_73655.png" alt="boek">
+                                <p>Boekingen</p>
+                            </div>
+                        </a>
+                        <a href="../gebruiker-pagina's/winkel-wagen.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/shopping-cart.png" alt="boek">
+                                <p>Winkel wagen</p>
+                                < </div>
+                        </a>
+                        <a href="../gebruiker-pagina's/wachtwoord-veranderen.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png"
+                                    alt="boek">
+                                <p>Wachtwoord veranderen</p>
+                            </div>
+                        </a>
                     </ul>
                 </div>
                 <div class="nav nav-right"></div>
@@ -96,12 +85,8 @@
         </div>
     </div>
 
-    <footer>
-        <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>
-        <a href="privacy-policy.php"> Privacy policy</a>
-        <a href="contact.php">Contact</a>
-        <a href="onsbedrijf.php">Ons Bedrijf</a>
-    </footer>
+    <?php include_once("../../footer-2.php");?>
+
 </body>
 
 </html>

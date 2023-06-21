@@ -6,4 +6,5 @@
 </footer>
 <section class="coppy">
     <p>Gemaakt door: Maik & Jan</p>
+
 </section>

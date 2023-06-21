@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/gebruiker.css">
+    <link rel="stylesheet" href="../css/gebruiker-pagina.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -81,24 +82,33 @@
                         <li>
                             <a href="gebruiker-pagina's/wachtwoord-veranderen.php">
                                 <div class="icon">
-                                    <img src="../img-reisbureau/icone-point-d-interrogation-question-jaune.png" alt="boek">
+                                    <img src="../img-reisbureau/icone-point-d-interrogation-question-jaune.png"
+                                        alt="boek">
                                     <p>Wachtwoord veranderen</p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="nav nav-right"></div>
+                <div class="nav nav-right">
+                    <div class="user-info">
+                        <div class="info naam">
+                            <label>Naam</label>
+                            <div class="icon-img">
+                                <img src="../img-reisbureau/edit-icon.png" alt="">
+                            </div>
+                        </div>
+                        <div class="info email">
+                            <label>Email</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>
-        <a href="privacy-policy.php"> Privacy policy</a>
-        <a href="contact.php">Contact</a>
-        <a href="onsbedrijf.php">Ons Bedrijf</a>
-    </footer>
+    <?php include_once("../footer.php");?>
+
 </body>
 
 </html>
