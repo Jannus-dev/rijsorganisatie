@@ -8,7 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/wachtwoord-vergeten.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -34,31 +34,16 @@
                 </li>
             </ul>
         </header>
-        <div class="box-form-login-register">
-            <div class="box-form-login">
+     
+            <div class="box-form-forgor">
                 <div class="h1box">
-                    <h1>Login</h1>
+                    <h2>Wachtwoord vergeten</h2>
                 </div>
                 <form name="login" action="index.php" method="post">
                     <input type="text" name="email" placeholder="Email" required autofocus>
-                    <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
-                    <input type="submit" name="login" value="login" require_once>
-                    <div class="checkbox-container">
-                        <div class="checkbox-box">
-                            <input type="checkbox" id="check" name="check" onclick="myFunction()">
-                            <label>Toon wachtwoord</label>
-                        </div>
-                        <a href="wachtwoord-vergeten.php">wachtwoord vergeten?</a>
-                    </div>
-
+                    <input type="submit" name="login" value="Verzend email" require_once>
                 </form>
             </div>
-            <a href="registreer.php">
-                <div class="register">
-                    <input type="submit" name="registreer" value="registreer" require_once>
-                </div>
-            </a>
-        </div>
     </div>
 
     <?php include_once("../footer.php"); ?>

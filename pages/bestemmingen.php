@@ -34,7 +34,6 @@ require_once "admin/conn.php";
                     </div>
                 </li>
                 <li><a href="willekeurig.php">Willekeurig</a></li>
-                <li><a href="deals.php">Deals</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>

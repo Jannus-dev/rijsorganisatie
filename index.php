@@ -33,8 +33,9 @@ $data = $stmt->fetchAll();
             <ul>
                 <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="pages/willekeurig.php">Willekeurig</a></li>
-                <li><a href="pages/deals.php">Deals</a></li>
                 <li><a href="pages/login.php">Login</a></li>
+                <li><a href="pages/gebruiker.php">gebruiker</a></li>
+
             </ul>
         </header>
         <nav>
@@ -62,11 +63,11 @@ $data = $stmt->fetchAll();
 
     </div>
     <footer>
-    <a href="pages/footerpage/algemene-voorwaarden.php">Algemene voorwaarden</a>
-    <a href="pages/footerpage/privacy-policy.php"> Privacy policy</a>
-    <a href="pages/footerpage/contact.php">Contact</a>
-    <a href="pages/footerpage/onsbedrijf.php">Ons Bedrijf</a>
-</footer>
+        <a href="pages/footerpage/algemene-voorwaarden.php">Algemene voorwaarden</a>
+        <a href="pages/footerpage/privacy-policy.php"> Privacy policy</a>
+        <a href="pages/footerpage/contact.php">Contact</a>
+        <a href="pages/footerpage/onsbedrijf.php">Ons Bedrijf</a>
+    </footer>
 
 </body>
 

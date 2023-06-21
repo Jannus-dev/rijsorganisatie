@@ -25,7 +25,6 @@
             <ul>
                 <li><a href="../bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="../willekeurig.php">Willekeurig</a></li>
-                <li><a href="../deals.php">Deals</a></li>
                 <li> <a href="../login.php">Login</a></li>
             </ul>
         </header>
