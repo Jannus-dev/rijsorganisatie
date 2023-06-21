@@ -39,7 +39,7 @@
                 <div class="h1box">
                     <h2>Wachtwoord vergeten</h2>
                 </div>
-                <form name="login" action="index.php" method="post">
+                <form name="login" action="../index.php" method="post">
                     <input type="text" name="email" placeholder="Email" required autofocus>
                     <input type="submit" name="login" value="Verzend email" require_once>
                 </form>

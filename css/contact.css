@@ -24,7 +24,7 @@ form {
 form * {
   color: black;
 }
-.box{
+.box {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -46,9 +46,9 @@ form input {
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-input[name="name"], input[name="email"] {
+input[name="name"],
+input[name="email"] {
   width: 47.5%;
-
 }
 input[name="login"]:hover {
   background-color: #ffd972;

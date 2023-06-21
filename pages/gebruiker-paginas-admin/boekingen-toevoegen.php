@@ -34,18 +34,18 @@
                     <ul>
                         <!-- ALLEEN ALS ADMIN!! -->
 
-                        <a href="../gebruiker-pagina's-admin/onderhoud.php">
+                        <a href="onderhoud.php">
                             <div class="icon">
                                 <img src="../../img-reisbureau/reparatie-icon.png" alt="moer">
                                 <p>Onderhoud</p>
                             </div>
                         </a>
 
-                        <a href="../gebruiker-pagina's-admin/boekingen-toevoegen.php">
+                        <a href="boekingen-toevoegen.php">
                             <div class="icon">
                                 <img src="../../img-reisbureau/booking-add.png" alt="boek">
                                 <p>Boekingen toevoegen</p>
-                            </div>
+                                < </div>
                         </a>
 
 
@@ -59,24 +59,24 @@
                                 <p>Gebruiker</p>
                             </div>
                         </a>
-                        <a href="../gebruiker-pagina's/boekingen.php">
+                        <a href="../gebruiker-paginas/boekingen.php">
                             <div class="icon">
                                 <img src="../../img-reisbureau/book_icon-icons.com_73655.png" alt="boek">
                                 <p>Boekingen</p>
                             </div>
                         </a>
-                        <a href="../gebruiker-pagina's/winkel-wagen.php">
+                        <a href="../gebruiker-paginas/winkel-wagen.php">
                             <div class="icon">
                                 <img src="../../img-reisbureau/shopping-cart.png" alt="boek">
                                 <p>Winkel wagen</p>
                             </div>
                         </a>
-                        <a href="../gebruiker-pagina's/wachtwoord-veranderen.php">
+                        <a href="../gebruiker-paginas/wachtwoord-veranderen.php">
                             <div class="icon">
                                 <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png"
                                     alt="boek">
                                 <p>Wachtwoord veranderen</p>
-                                < </div>
+                            </div>
                         </a>
                     </ul>
                 </div>

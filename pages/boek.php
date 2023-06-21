@@ -1,9 +1,5 @@
 <?php
-require_once 'admin/conn.php';
-$stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
-    LIMIT 3");
-$stmt->execute();
-$data = $stmt->fetchAll();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +8,10 @@ $data = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willekeurig</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/willekeurig.css">
+    <link rel="stylesheet" href="../css/boek.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -31,149 +27,55 @@ $data = $stmt->fetchAll();
             </div>
             <ul>
                 <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                <li>
-                    <div class="box">
-                        <img src="../img-reisbureau\linkervleugel.png" alt="">
-                        <a href="willekeurig.php">Willekeurig</a>
-                        <img src="../img-reisbureau\rechtervleugel.png" alt="">
-                    </div>
-                </li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="willekeurig.php">Willekeurig</a></li>
+                <li> <a href="login.php">Login</a></li>
             </ul>
         </header>
-        <div class="item-container">
-            <div class="nav-box">
-                <nav>
-                    <h2>Filter op:</h2>
-                    <form>
-                        <label>
-                            <input type="checkbox" name="hotel" value="all-inclusive">
-                            All-Inclusive
-                        </label>
-                        <label>
-                            <input type="checkbox" name="hotel" value="bed-and-breakfast">
-                            Bed & Breakfast
-                        </label>
-                        <label>
-                            <input type="checkbox" name="hotel" value="zwembad">
-                            Zwembad
-                        </label>
+
+        <div class="user-boekingen-box">
+            <div class="boekingen">
+                <div class="box">
+                    <div class="info-box">
+                        <h1>
+                            <?php
+                            echo $_SESSION['voornaam'];
+                            // hotel naam
+                            ?>
+                        </h1>
+                        <h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu auctor sapien. Integer rutrum in eros eu egestas. Sed egestas erat urna, pellentesque imperdiet libero placerat ac. Duis porttitor, nulla dictum lobortis posuere.
+                            <!-- TEXTJE -->
+                        </h3>
+                    </div>
+                    <div class="img">
+                        <img src="../img-reisbureau/beach.png" alt="FOTO?">
+                    </div>
+                </div>
+
+                <!-- JAN ZORG ERVOOR DAT JE KIJKT OF IE AL INGELOGD IS. -->
+                <!-- ALS HIJ INGELOGD IS MOET JE HEM NAAR gebruiker-paginas/boekingen.php STUREN -->
+                <!-- ALS HIJ NIET INGELOGD IS MOET HIJ NAAR LOGIN.PHP STUREN -->
+                <div class="book-box">
+                    <form action="login.php">
+                        <h2>
+                            13€
+                        </h2>
+                        <input type="submit" name="book" value="Boek nu">
                     </form>
-
-                    <!-- <button onclick="filterHotel_ingebgrepen()">Filter</button> -->
-
-                </nav>
-                <nav>
-                    <h2>Filter regio/'s:</h2>
-                    <form>
-                        <label>
-                            <input type="checkbox" name="region" value="Europe">
-                            Europa
-                        </label>
-                        <label>
-                            <input type="checkbox" name="region" value="North America">
-                            Noord-Amerika
-                        </label>
-                        <label>
-                            <input type="checkbox" name="region" value="South America">
-                            Zuid-Amerika
-                        </label>
-                        <label>
-                            <input type="checkbox" name="region" value="Asia">
-                            Azië
-                        </label>
-                        <label>
-                            <input type="checkbox" name="region" value="Africa">
-                            Afrika
-                        </label>
-                        <label>
-                            <input type="checkbox" name="region" value="Australia">
-                            Australië
-                        </label>
-
-                    </form>
-                    <button onclick="filterRegion()" onclick="filterHotel_ingebgrepen()">Filter</button>
-                </nav>
-
-            </div>
-            <div class="deals-box">
-                <?php
-                foreach ($data as $row) {
-                    echo " <div class='deal item'>";
-                    // echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
-                    echo "<div class='img'>";
-                    echo " <img src='../img-reisbureau/beach.png' alt='foto?'>";
-                    echo "</div>";
-                    // hierboven als img van iets zoals een hotel
-                    echo "<div class='whitebox-botom'>";
-                    echo "<h2>" . $row['land'] . "</h2>";
-                    // hierboven als titel niet random maar van een hotel ofzo
-                    echo "<a href='boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
-                    echo "</div>";
-
-                    // echo "<h3>" . $data_text['text'] . "</h3>";
-                    
-                    // hierboven als informatie over product
-                
-                    echo "</div>";
-                }
-                ?>
+                </div>
             </div>
         </div>
 
+
+
     </div>
 
-    <?php include_once("../footer.php"); ?>
+    <footer>
+        <a href="algemene-voorwaarden.php">Algemene voorwaarden</a>
+        <a href="privacy-policy.php"> Privacy policy</a>
+        <a href="contact.php">Contact</a>
+        <a href="onsbedrijf.php">Ons Bedrijf</a>
+    </footer>
 </body>
-
-<script>
-// function filterRegion() {
-//     var regionRadios = document.getElementsByName("region");
-//     var selectedRegion = "";
-
-//     for (var i = 0; i < regionRadios.length; i++) {
-//         if (regionRadios[i].checked) {
-//             selectedRegion = regionRadios[i].value;
-//             break;
-//         }
-//     }
-
-//     if (selectedRegion !== "") {
-//         console.log("Geselecteerde regio: " + selectedRegion);
-//     } else {
-//         alert("Kies een regio A.U.B.");
-//     }
-// }
-
-function filterHotel_ingebgrepen() {
-    var regionCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    var selectedRegions = [];
-
-    regionCheckboxes.forEach(function(checkbox) {
-        selectedRegions.push(checkbox.value);
-    });
-
-    if (selectedRegions.length > 0) {
-        // Perform any desired operations with the selected regions
-        console.log("Selected Regions: " + selectedRegions.join(", "));
-    }
-}
-
-function filterRegion() {
-    var regionCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    var selectedRegions = [];
-
-    regionCheckboxes.forEach(function(checkbox) {
-        selectedRegions.push(checkbox.value);
-    });
-
-    if (selectedRegions.length > 0) {
-        // Perform any desired operations with the selected regions
-        console.log("Geselecteerde regio/'s: " + selectedRegions.join(", "));
-    } else {
-        alert("Kies een regio A.U.B.");
-    }
-}
-</script>
 
 </html>

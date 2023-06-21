@@ -36,7 +36,9 @@
 
                 <input type="text" name="email" placeholder="Email" required autofocus>
                 <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
-                <input type="text" name="naam" placeholder="Uw naam" required>
+                <input type="text" name="voornaam" placeholder="Voornaam" required>
+                <input type="text" name="achternaam" placeholder="Achternaam" required>
+
                 <input type="submit" name="registreer" value="registreer" require_once>
                 <div class="checkbox-box">
                     <input type="checkbox" id="check" name="check" onclick="myFunction()">

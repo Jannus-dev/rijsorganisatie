@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding-right: 110px;
 }
 .info {
   display: flex;
@@ -21,8 +20,6 @@
 }
 form {
   align-self: flex-end;
-  position: sticky;
-  bottom: 0;
 }
 
 form input[name="logout"] {

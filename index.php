@@ -4,6 +4,7 @@ $stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
     LIMIT 8");
 $stmt->execute();
 $data = $stmt->fetchAll();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +34,16 @@ $data = $stmt->fetchAll();
             <ul>
                 <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
                 <li><a href="pages/willekeurig.php">Willekeurig</a></li>
-                <li><a href="pages/login.php">Login</a></li>
-                <li><a href="pages/gebruiker.php">gebruiker</a></li>
+                <?php
+                // Controleer of de gebruiker is ingelogd
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                    // Gebruiker is ingelogd, toon de knop 'Gebruiker'
+                    echo '<li><a href="pages/gebruiker.php">Gebruiker</a></li>';
+                } else {
+                    // Gebruiker is niet ingelogd, toon de knop 'Inloggen'
+                    echo '<li><a href="pages/login.php">Login</a></li>';
+                }
+                ?>
 
             </ul>
         </header>
@@ -51,7 +60,7 @@ $data = $stmt->fetchAll();
                         echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
                         echo "<div class='whitebox-botom'>";
                         echo "<h3>" . $row['land'] . "</h3>";
-                        echo "<a href='pages/bestemmingen.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                        echo "<a href='pages/boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
                         echo "</div>";
                         echo "</div>";
                     }

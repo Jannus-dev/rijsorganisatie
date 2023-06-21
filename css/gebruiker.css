@@ -16,13 +16,13 @@
   overflow-y: scroll;
   border-radius: 5px;
 }
-.nav-left{
+.nav-left {
   width: 20%;
   /* display: flex; */
 }
-.nav-right{
+.nav-right {
   width: 80%;
-  padding-left: 100px;
+  padding-left: 150px;
 }
 .nav {
   height: 100%;
@@ -30,7 +30,7 @@
 .nav * {
   color: black;
 }
-.black-line{
+.black-line {
   /* width: 100%; */
   width: 225px;
   height: 1px;
