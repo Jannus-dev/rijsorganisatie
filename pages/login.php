@@ -39,10 +39,10 @@
                 <div class="h1box">
                     <h1>Login</h1>
                 </div>
-                <form name="login" action="index.php" method="post">
+                <form name="login" action="check_login.php" method="POST">
                     <input type="text" name="email" placeholder="Email" required autofocus>
                     <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>
-                    <input type="submit" name="login" value="login" require_once>
+                    <input type="submit" name="login" value="Login">
                     <div class="checkbox-container">
                         <div class="checkbox-box">
                             <input type="checkbox" id="check" name="check" onclick="myFunction()">

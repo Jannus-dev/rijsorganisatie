@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <div class="background">
     <header>
         <nav>
@@ -9,7 +12,16 @@
             <a href="Willekeurig.php">Willekeurig</a>
             <a href="Deals.php">Deals</a>
             <a href="Ons-Bedrijf.php">Ons Bedrijf</a>
-            <a href="Login.php">Login</a>
+            <?php
+            // Controleer of de gebruiker is ingelogd
+            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                // Gebruiker is ingelogd, toon de knop 'Gebruiker'
+                echo '<a href="pages/gebruiker.php">Gebruiker</a>';
+            } else {
+                // Gebruiker is niet ingelogd, toon de knop 'Inloggen'
+                echo '<a href="pages/inlog.php">Login</a>';
+            }
+            ?>
         </nav>
     </header>
 </div>

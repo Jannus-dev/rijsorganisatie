@@ -1,0 +1,76 @@
+.user-boekingen-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  padding: 0 100px;
+  margin: 100px 0 75px 0;
+}
+.boekingen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+  max-width: 750px;
+  height: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.boekingen * {
+  color: black;
+}
+.boekingen img {
+  height: 150px;
+  /* width: 100%; */
+  border-radius: 3px;
+  align-self: center;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 0 30px;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 50%;
+  height: 100%;
+}
+.book-box {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+}
+form {
+  /* align-items: center; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 3em;
+  padding: 0 40px;
+}
+form input[name="book"] {
+  padding: 5px 10px;
+  width: 130px;
+  background-color: #ffd972;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  transition: ease 0.3s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+input[name="book"]:hover {
+  background-color: #ffd972;
+  cursor: pointer;
+  scale: 1.1;
+  font-weight: bolder;
+}
