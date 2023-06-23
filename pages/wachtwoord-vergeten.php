@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,8 +26,7 @@
                 </a>
             </div>
             <ul>
-                <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="willekeurig.php">Willekeurig</a></li>
+                <li><a href="willekeurig.php">Bestemmingen</a></li>
                 <li>
                     <div class="box">
                         <img src="../img-reisbureau\linkervleugel.png" alt="">

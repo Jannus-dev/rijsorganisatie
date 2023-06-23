@@ -1,11 +1,28 @@
 <?php
-require_once 'pages/admin/conn.php';
-$stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
-    LIMIT 8");
-$stmt->execute();
-$data = $stmt->fetchAll();
+// require_once 'pages/admin/conn.php';
+// $stmt = $conn->prepare("SELECT * FROM landen ORDER BY RAND()
+//     LIMIT 8");
+// $stmt->execute();
+// $data = $stmt->fetchAll();
+
+
 session_start();
 ?>
+
+<?php
+// Inclusie van het bestand voor de databaseverbinding
+require 'pages/admin/conn.php';
+
+// Voorbereiden van de databasequery om 8 willekeurige hotelkamers op te halen
+$query = "SELECT hk.*
+          FROM `hotel-kamers` hk
+          ORDER BY RAND()
+          LIMIT 8";
+
+// Uitvoeren van de query
+$stmt = $conn->query($query);
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,27 +72,33 @@ session_start();
             <div class="voorgestelde-lijst">
                 <section>
                     <?php
-                    foreach ($data as $row) {
-                        echo "<div class='whitebox'>";
-                        echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
-                        echo "<div class='whitebox-botom'>";
-                        echo "<h3>" . $row['land'] . "</h3>";
-                        echo "<a href='pages/boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                    ?>
-                            foreach ($data as $row) {
+
+                        if ($stmt->rowCount() > 0) {
+
+                            // Weergeven van de resultaten
+                            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<div class='whitebox'>";
-                                echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                                echo "<img class='whitebox-img' src='img\zomervakantie.png' alt='test'>";
                                 echo "<div class='whitebox-botom'>";
-                                echo "<h3>" . $row['land'] . "</h3>";
-                                echo "<a href='pages/bestemmingen.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                                echo "<h3>" . $row['naam'] . "</h3>";
+                                echo "<a href='pages/boek.php?id=" . $row['id'] . "' class='whitebox-link'>»</a>";
                                 echo "</div>";
                                 echo "</div>";
                             }
+                        } else {
+                            echo "<p>Geen hotelkamers gevonden.</p>";
+                        }
 
-                        ?>
+                    // foreach ($data as $row) {
+                    //     echo "<div class='whitebox'>";
+                    //     echo "<img class='whitebox-img' src='" . $row['img'] . "' alt='test'>";
+                    //     echo "<div class='whitebox-botom'>";
+                    //     echo "<h3>" . $row['land'] . "</h3>";
+                    //     echo "<a href='pages/boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+                    //     echo "</div>";
+                    //     echo "</div>";
+                    // }
+                    ?>
                 </section>
             </div>
         </div>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,9 +24,8 @@
                 </a>
             </div>
             <ul>
-                <li><a href="../bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="../willekeurig.php">Willekeurig</a></li>
-                <li> <a href="../login.php">Login</a></li>
+                <li><a href="../willekeurig.php">Bestemmingen</a></li>
+                <li><a href="../gebruiker.php">Gebruiker</a></li>
             </ul>
         </header>
         <div class="container">

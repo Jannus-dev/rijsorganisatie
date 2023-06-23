@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "admin/conn.php";
 ?>
 <!DOCTYPE html>
@@ -34,7 +35,16 @@ require_once "admin/conn.php";
                     </div>
                 </li>
                 <li><a href="willekeurig.php">Willekeurig</a></li>
-                <li><a href="login.php">Login</a></li>
+                <?php
+                // Controleer of de gebruiker is ingelogd
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                    // Gebruiker is ingelogd, toon de knop 'Gebruiker'
+                    echo '<li><a href="gebruiker.php">Gebruiker</a></li>';
+                } else {
+                    // Gebruiker is niet ingelogd, toon de knop 'Inloggen'
+                    echo '<li><a href="login.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </header>
         <div class="nav">
