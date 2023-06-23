@@ -31,7 +31,7 @@ $stmt = $conn->query($query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GeenIdee.NL</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
@@ -49,8 +49,7 @@ $stmt = $conn->query($query);
                 </a>
             </div>
             <ul>
-                <li><a href="pages/bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="pages/willekeurig.php">Willekeurig</a></li>
+                <li><a href="pages/willekeurig.php">Bestemmingen</a></li>
                 <?php
                 // Controleer of de gebruiker is ingelogd
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
