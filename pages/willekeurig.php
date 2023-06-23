@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Inclusie van het bestand voor de databaseverbinding
 require 'admin/conn.php';
 
@@ -20,7 +21,7 @@ $continenten = array(
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willekeurig</title>
+    <title>Bestemmingen</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/willekeurig.css">
@@ -38,15 +39,23 @@ $continenten = array(
                 </a>
             </div>
             <ul>
-                <li><a href="bestemmingen.php">Bestemmingen</a></li>
                 <li>
                     <div class="box">
                         <img src="../img-reisbureau\linkervleugel.png" alt="">
-                        <a href="willekeurig.php">Willekeurig</a>
+                        <a href="willekeurig.php">Bestemmingen</a>
                         <img src="../img-reisbureau\rechtervleugel.png" alt="">
                     </div>
                 </li>
-                <li><a href="login.php">Login</a></li>
+                <?php
+                // Controleer of de gebruiker is ingelogd
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                    // Gebruiker is ingelogd, toon de knop 'Gebruiker'
+                    echo '<li><a href="gebruiker.php">Gebruiker</a></li>';
+                } else {
+                    // Gebruiker is niet ingelogd, toon de knop 'Inloggen'
+                    echo '<li><a href="login.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </header>
         <div class="item-container">
@@ -180,7 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "</div>";
             echo "<div class='whitebox-botom'>";
             echo "<h2>" . $row['naam'] . "</h2>";
-            echo "<a href='boek.php?" . $row['id'] . "' class='whitebox-link'>»</a>";
+            echo "<a href='boek.php?id=" . $row['id'] . "' class='whitebox-link'>»</a>";
             echo "</div>";
             echo "<h3>" . $row['text'] . "</h3>";
             echo "<div class='price-box'>";

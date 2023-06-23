@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/gebruiker.css">
     <link rel="stylesheet" href="../../css/onderhoud.css">
-    <link rel="stylesheet" href="../../css/boekingen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -82,31 +81,39 @@
                     </ul>
                 </div>
                 <div class="nav nav-right">
-                    <div class="user-boekingen-container">
-                        <div class="user-boekingen-box">
-                            <a href="gebruikers-onderhoud.php">
-                                <div class='boekingen'>
-                                    <div class='box'>
-                                        <div class='img'>
-                                            <img src='../../img-reisbureau/reparatie-icon.png' alt='Moer'>
-                                        </div>
-                                        Gebruikers
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="boekingen-onderhoud.php">
-                                <div class='boekingen'>
-                                    <div class='box'>
-                                        <div class='img'>
-                                            <img src='../../img-reisbureau/reparatie-icon.png' alt='Moer'>
-                                        </div>
-                                        Trip
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
+                <?php
+                    // Verbinding maken met de database (conn.php)
+                    require_once '../admin/conn.php';
+
+                    // Query om alle gebruikers op te halen
+                    $query = "SELECT * FROM `hotel-kamers`";
+                    $stmt = $conn->query($query);
+
+                    // Controleren of er gebruikers zijn gevonden
+                    if ($stmt->rowCount() > 0) {
+                        echo "<h2>Gebruikers:</h2>";
+                        echo "<table>";
+                        echo "<tr><th>ID</th><th>Hotel id</th><th>Kamer naam</th><th>min personen</th><th>max personen</th><th>bedden</th><th>prijs</th></tr>";
+
+                        // Gegevens van elke gebruiker weergeven
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['hotel_id'] . "</td>";
+                            echo "<td>" . $row['naam'] . "</td>";
+                            echo "<td>" . $row['min-personen'] . "</td>";
+                            echo "<td>" . $row['max-personen'] . "</td>";
+                            echo "<td>" . $row['bedden'] . "</td>";
+                            echo "<td>" . $row['prijs'] . "</td>";
+                            echo "<td><a id='bewerken-hover' href='bewerken-boekingen.php?kamer_id=" . $row['id'] . "'>Bewerken</a></td>";
+                            echo "</tr>";
+                        }
+
+                        echo "</table>";
+                    } else {
+                        echo "Geen gebruikers gevonden.";
+                    }
+                    ?>
 
                 </div>
             </div>

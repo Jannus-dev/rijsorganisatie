@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registreren</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/registreer.css">
@@ -23,8 +23,7 @@
                 </a>
             </div>
             <ul>
-                <li><a href="bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="willekeurig.php">Willekeurig</a></li>
+                <li><a href="willekeurig.php">Bestemmingen</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
         </header>
@@ -32,7 +31,7 @@
             <div class="h1box">
                 <h1>Registreer</h1>
             </div>
-            <form name="login" action="login.php" method="post">
+            <form action="registreren-backend.php" method="post">
 
                 <input type="text" name="email" placeholder="Email" required autofocus>
                 <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord" required>

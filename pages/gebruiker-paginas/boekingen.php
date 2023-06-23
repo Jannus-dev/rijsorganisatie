@@ -1,3 +1,6 @@
+<?php
+    require_once '../admin/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Boekingen</title>
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/gebruiker.css">
@@ -24,9 +27,8 @@
                 </a>
             </div>
             <ul>
-                <li><a href="../bestemmingen.php">Bestemmingen</a></li>
-                <li><a href="../willekeurig.php">Willekeurig</a></li>
-                <li> <a href="../login.php">Login</a></li>
+                <li><a href="../willekeurig.php">Bestemmingen</a></li>
+                <li><a href="../gebruiker.php">Gebruiker</a></li>
             </ul>
         </header>
         <div class="container">
@@ -86,10 +88,49 @@
                         </a>
                     </ul>
                 </div>
+
+                <?php
+                $gebruikerId = $_SESSION['gebruiker_id'];
+
+                // Voorbereiden van de databasequery om boekingen op te halen
+                $query = "SELECT b.*, hk.naam AS hotelkamer_naam
+                          FROM boekingen b
+                          INNER JOIN `hotel-kamers` hk ON b.hotel_kamer_id = hk.id
+                          WHERE b.gebruiker_id = :gebruiker_id";
+                $stmt = $conn->prepare($query);
+                $stmt->bindValue(':gebruiker_id', $gebruikerId, PDO::PARAM_INT);
+                $stmt->execute();
+                ?>
                 <div class="nav nav-right">
                     <div class="user-boekingen-container">
                         <div class="user-boekingen-box">
-                            <div class="boekingen">
+                            <?php
+                                if ($stmt->rowCount() > 0) {
+                                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                        echo "<div class='boekingen'>";
+                                        echo "<div class='box'>";
+                                        echo "<div class='img'>";
+                                        echo "<img src='../../img-reisbureau/beach.png' alt='FOTO?'>";
+                                        echo "</div>";
+                                        echo $row["hotelkamer_naam"];
+                                        echo "</div>";
+                                        echo "<form action='../cancel.php' method='POST'>";
+                                        echo "<input type='hidden' name='gebruiker_id' value='" . $gebruikerId . "'>";
+                                        echo "<input type='hidden' name='hotel_kamer_id' value='" . $row["hotel_kamer_id"] . "'>";
+                                        echo "<input type='submit' name='cancel' value='Annuleren'>";
+                                        echo "</form>";
+                                        echo "</div>";
+
+                                        // echo "<p><strong>Gebruiker ID:</strong> " . $row["gebruiker_id"] . "</p>";
+                                        // echo "<p><strong>Hotel Kamer ID:</strong> " . $row["hotel_kamer_id"] . "</p>";
+                                        // echo "<p><strong>Hotel Kamer Naam:</strong> " . $row["hotelkamer_naam"] . "</p>";
+                                        // echo "<hr>";
+                                    }
+                                } else {
+                                    echo "<p>Geen boekingen gevonden.</p>";
+                                }
+                            ?>
+                            <!-- <div class="boekingen">
                                 <div class="box">
                                     <div class="img">
                                         <img src="../../img-reisbureau/beach.png" alt="FOTO?">
@@ -101,7 +142,7 @@
                                 <form action="../cancel.php">
                                     <input type="submit" name="cancel" value="Annuleren">
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 

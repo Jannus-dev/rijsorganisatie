@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Onderhoud</title>
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/gebruiker.css">
-    <link rel="stylesheet" href="../../css/wachtwoord-veranderen.css">
+    <link rel="stylesheet" href="../../css/onderhoud.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&display=swap" rel="stylesheet">
@@ -35,30 +34,23 @@
                     <ul>
                         <!-- ALLEEN ALS ADMIN!! -->
 
-                        <?php
-                        session_start();
-                        if ($_SESSION['rol'] <= 10) {
-                            echo "<li>";
-                            echo "<a href='../gebruiker-paginas-admin/onderhoud.php'>";
-                            echo "<div class='icon'>";
-                            echo "<img src='../../img-reisbureau/reparatie-icon.png' alt='moer'>";
-                            echo "<p>Onderhoud</p>";
-                            echo "</div>";
-                            echo "</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<a href='../gebruiker-paginas-admin/boekingen-toevoegen.php'>";
-                            echo "<div class='icon'>";
-                            echo "<img src='../../img-reisbureau/booking-add.png' alt='boek'>";
-                            echo "<p>Boekingen toevoegen</p>";
-                            echo "</div>";
-                            echo "</a>";
-                            echo "</li>";
-                            echo "<li>";
-                            echo "<div class='black-line'></div>";
-                            echo "</li>";
-                        }
-                        ?>
+                        <a href="onderhoud.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/reparatie-icon.png" alt="moer">
+                                <p>Onderhoud</p>
+                                < </div>
+                        </a>
+
+                        <a href="boekingen-toevoegen.php">
+                            <div class="icon">
+                                <img src="../../img-reisbureau/booking-add.png" alt="boek">
+                                <p>Boekingen toevoegen</p>
+                            </div>
+                        </a>
+
+
+                        <div class="black-line"></div>
+                        </li>
                         <!-- TOT EN MET HIER -->
 
                         <a href="../gebruiker.php">
@@ -81,20 +73,53 @@
                         </a>
                         <a href="../gebruiker-paginas/wachtwoord-veranderen.php">
                             <div class="icon">
-                                <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png" alt="boek">
+                                <img src="../../img-reisbureau/icone-point-d-interrogation-question-jaune.png"
+                                    alt="boek">
                                 <p>Wachtwoord veranderen</p>
-                                < </div>
+                            </div>
                         </a>
                     </ul>
                 </div>
                 <div class="nav nav-right">
-                    <h2>Stuur een email naar: suport@geenidee.nl</h2>
-                    <p>Daar zullen wij u veder helpen.</p>
+                    
+                <?php
+                    // Verbinding maken met de database (conn.php)
+                    require_once '../admin/conn.php';
+
+                    // Query om alle gebruikers op te halen
+                    $query = "SELECT * FROM users";
+                    $stmt = $conn->query($query);
+
+                    // Controleren of er gebruikers zijn gevonden
+                    if ($stmt->rowCount() > 0) {
+                        echo "<h2>Gebruikers:</h2>";
+                        echo "<table>";
+                        echo "<tr><th>ID</th><th>Voornaam</th><th>Achternaam</th><th>Email</th></tr>";
+
+                        // Gegevens van elke gebruiker weergeven
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['voornaam'] . "</td>";
+                            echo "<td>" . $row['achternaam'] . "</td>";
+                            echo "<td>" . $row['email'] . "</td>";
+                            echo "<td><a id='bewerken-hover' href='bewerken.php?id=" . $row['id'] . "'>Bewerken</a></td>";
+                            echo "</tr>";
+                        }
+
+                        echo "</table>";
+                    } else {
+                        echo "Geen gebruikers gevonden.";
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
     </div>
-    <?php include_once("../../footer-2.php"); ?>
+
+    <?php include_once("../../footer-2.php");?>
+
 </body>
 
 </html>

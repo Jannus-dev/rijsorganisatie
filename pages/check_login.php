@@ -5,7 +5,7 @@ require_once 'admin/conn.php';
 $email = $_POST['email'];
 $wachtwoord = $_POST['wachtwoord'];
 
-$stmt = $conn->prepare("SELECT email, wachtwoord, rol, voornaam, achternaam FROM users WHERE email=:email AND wachtwoord=:wachtwoord");
+$stmt = $conn->prepare("SELECT email, wachtwoord, rol, voornaam, achternaam, id FROM users WHERE email=:email AND wachtwoord=:wachtwoord");
 $stmt->execute(['email' => $email, 'wachtwoord' => $wachtwoord]);
 $user = $stmt->fetch();
 
@@ -15,6 +15,7 @@ if ($user != false) {
     $_SESSION['rol'] = $user['rol'];
     $_SESSION['voornaam'] = $user['voornaam'];
     $_SESSION['achternaam'] = $user['achternaam'];
+    $_SESSION['gebruiker_id'] = $user['id'];
 
     
     // Na het valideren van de inloggegevens en succesvol inloggen
